@@ -7,6 +7,8 @@
 ログインシステムは以下のサイトを参考にした<br>
 https://qiita.com/revvve44/items/b91e0a1fc6d5eb9a31c8
 
+ボタンや表はスマホで見るとちょうどいい場所に調整してあるのでPCから見ると少し歪に見える
+
 ## サーバの起動方法
 1. flaskr/models.py内のDB_URIを使用するURIに変更する
 2. 使用するDBで`create_all()`し、テーブルを作成しておく
@@ -19,3 +21,5 @@ https://qiita.com/revvve44/items/b91e0a1fc6d5eb9a31c8
 4. ステータス変更を押すことで自身のステータスを在室、離席、退室、その他に変更できる
     1. その他の場合はテキストボックスに好きなステータスを書き込むことができる
 5. 画面上部の設定画面ではユーザ名(表示名)、年次、アイコン画像の変更ができる
+
+<img width="401" alt="スクリーンショット 2023-03-31 21 25 16" src="https://user-images.githubusercontent.com/29766861/229120088-297dd52f-0e09-4be7-a660-70f0f4ac43fd.png">
