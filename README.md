@@ -10,6 +10,7 @@ https://qiita.com/revvve44/items/b91e0a1fc6d5eb9a31c8
 ボタンや表はスマホで見るとちょうどいい場所に調整してあるのでPCから見ると少し歪に見える
 
 ## サーバの起動方法
+1. `source venv/bin/activate`で仮想環境venvを起動
 1. flaskr/models.py内のDB_URIを使用するURIに変更する
 2. 使用するDBで`create_all()`し、テーブルを作成しておく
 3. コマンドプロンプトで`python setup.py`を実行することでサーバが起動する
