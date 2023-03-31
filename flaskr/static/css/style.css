@@ -1,0 +1,124 @@
+.image-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.tb-member {
+    font-size: 15px;
+    margin: auto;
+    width: 90%;
+    border: 3px solid #000000;
+    border-radius: 30px;
+}
+table tr {
+    border-top: 1px solid #000000;
+}
+.you {
+    background-color: #27add9ac;
+}
+.td-icon {
+    width: 60px;
+}
+.td-degree {
+    text-align: center;
+}
+.td-name {
+    text-align: center;
+}
+.td-status {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.nav-status ul {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    padding: 0;
+}
+.nav-item {
+    border: 2px solid #27acd9;
+    border-radius: 30px;
+    background: #27acd9;
+    margin: 3px;
+}
+.nav-link {
+    color: #fff;
+}
+
+.disp-top {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
+
+a.status-a {
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 200px;
+	margin: auto;
+	padding: 0.5em 1em;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	background: #27acd9;
+	color: #fff;
+	border-radius: 30vh;
+	transition: 0.5s;
+}
+a.status-a:hover {
+	color: #27acd9;
+	background: #fff;
+}
+
+input[type=radio] {
+    display: none;
+}
+.radio-label {
+    width: 58px;
+    text-align: center;
+    margin: 5px; /* ラベル外側の余白を指定する */
+    border: 2px solid #27acd9;/* ラベルの境界線を実線で指定する */
+    border-radius: 15px;
+}
+.radio-label:hover {
+    background: #6dd3f8;
+	color: #00363d;
+}
+input:checked + label {
+    background: #27acd9;
+	color: #fff;
+}
+
+input[type=submit] {
+    display: inline-block;
+    border-radius: 15px;
+    border: 2px solid #27acd9;
+    background: #27acd9;
+    color: #fff;
+}
+input[type=submit]:hover {
+    border: 2px solid #fff;
+    background: #fff;
+    color: #27acd9;
+}
+
+input[type=text] {
+    border: 2px solid #27acd9;
+    border-radius: 15px;
+}
+input[type=password] {
+    border: 2px solid #27acd9;
+    border-radius: 15px;
+}
+
+select {
+    border: 2px solid #27acd9;
+    border-radius: 15px;
+}

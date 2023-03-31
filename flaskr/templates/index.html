@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% from "_helpers.html" import validate_picture %}
+
+{% block title%}
+    Index{{super()}}
+{% endblock %}
+
+{% block container %}
+<h1>メンバー</h1>
+
+{% if current_user.is_authenticated %}
+
+    <nav class="nav-status">
+        <ul class="nav">
+            <li class="nav-item"><a class="status-a" href="{{url_for('status')}}">ステータス変更</a></li>
+        </ul>
+    </nav>
+
+    <h1>入室者</h1>
+
+    <table class="tb-member">
+        {% for entry in entry_user %}
+            {% if entry == current_user %}
+                <tr class="you">
+                    <td class="td-icon">{{validate_picture(entry, 'image-icon')}}</td>
+                    <td class="td-degree">{{entry.degree_year}}</td>
+                    <td class="td-name">{{entry.username}}</td>
+                    <td class="td-status">{{entry.status}}</td>
+                </tr>
+            {% else %}
+                <tr class="other-user">
+                    <td class="td-icon">{{validate_picture(entry, 'image-icon')}}</td>
+                    <td class="td-degree">{{entry.degree_year}}</td>
+                    <td class="td-name">{{entry.username}}</td>
+                    <td class="td-status">{{entry.status}}</td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+    
+    <nav class="nav-status">
+        <ul class="nav">
+            <li class="nav-item"><a class="status-a" href="{{url_for('status')}}">ステータス変更</a></li>
+        </ul>
+    </nav>
+
+    <h1>退室者</h1>
+
+    <table class="tb-member">
+        {% for exit in exit_user %}
+            {% if exit == current_user %}
+                <tr class="you">
+                    <td class="td-icon">{{validate_picture(exit, 'image-icon')}}</td>
+                    <td class="td-degree">{{exit.degree_year}}</td>
+                    <td class="td-name">{{exit.username}}</td>
+                    <td class="td-status">{{exit.status}}</td>
+                </tr>
+            {% else %}
+                <tr class="other-user">
+                    <td class="td-icon">{{validate_picture(exit, 'image-icon')}}</td>
+                    <td class="td-degree">{{exit.degree_year}}</td>
+                    <td class="td-name">{{exit.username}}</td>
+                    <td class="td-status">{{exit.status}}</td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+    
+    <nav class="nav-status">
+        <ul class="nav">
+            <li class="nav-item"><a class="status-a" href="{{url_for('status')}}">ステータス変更</a></li>
+        </ul>
+    </nav>
+
+{% else %}
+    <p>ログインしてください</p>
+{% endif %}
+
+
+{% endblock %}

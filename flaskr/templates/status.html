@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% from "_helpers.html" import render_field %}
+
+{% block title%}
+    Setting{{super()}}
+{% endblock %}
+
+{% block container %}
+<h1>ステータス変更画面</h1>
+
+<form method='POST' enctype="multipart/form-data">
+    {% for status in form.status %}
+    <tr>
+        <td>
+            {{ status }}
+        </td>
+        <td>
+            <label class="radio-label">{{ status.label }}</label>
+        </td>
+    </tr>
+    {% endfor %}
+
+    {{render_field(form.othertext)}}
+    <!-- flashを実行する -->
+    {% for message in get_flashed_messages() %}
+    <p>※{{message}}</p>
+    {% endfor %}
+
+    {{form.submit()}}
+</form>
+
+{% endblock %}

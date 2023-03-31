@@ -1,0 +1,4 @@
+sources env/bin/activate
+でvenv環境をアクティベート
+deactivate
+で環境を非アクティブ化

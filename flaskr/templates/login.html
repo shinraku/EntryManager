@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% from "_helpers.html" import render_field %}
+
+{% block title%}
+    Login{{super()}}
+{% endblock %}
+
+{% block container %}
+<h1>ログイン画面</h1>
+
+<!-- flashを実行する -->
+{% for message in get_flashed_messages() %}
+<p>※{{message}}</p>
+{% endfor %}
+
+<form method='POST'>
+    {{render_field(form.userid)}}
+    {{render_field(form.password)}}
+    <a class="forgot-pass" href="{{url_for('forgot_password')}}">パスワードを忘れた場合はこちら</a><br>
+    {{form.submit()}}
+</form>
+
+{% endblock %}
